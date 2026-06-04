@@ -1,0 +1,553 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [
+    {
+      "id": 1,
+      "label": "ATP",
+      "tokens": 4,
+      "x": 140,
+      "y": 660
+    },
+    {
+      "id": 2,
+      "label": "ADP",
+      "tokens": 0,
+      "x": 140,
+      "y": 540
+    },
+    {
+      "id": 3,
+      "label": "Kinase",
+      "tokens": 1,
+      "x": 300,
+      "y": 660
+    },
+    {
+      "id": 4,
+      "label": "Substrate",
+      "tokens": 2,
+      "x": 460,
+      "y": 660
+    },
+    {
+      "id": 5,
+      "label": "P-Substrate",
+      "tokens": 0,
+      "x": 460,
+      "y": 540
+    },
+    {
+      "id": 6,
+      "label": "Phosphatase",
+      "tokens": 1,
+      "x": 620,
+      "y": 600
+    },
+    {
+      "id": 7,
+      "label": "Ligand",
+      "tokens": 2,
+      "x": 140,
+      "y": 380
+    },
+    {
+      "id": 8,
+      "label": "Receptor monomer",
+      "tokens": 4,
+      "x": 300,
+      "y": 380
+    },
+    {
+      "id": 9,
+      "label": "Ligand-monomer",
+      "tokens": 0,
+      "x": 460,
+      "y": 380
+    },
+    {
+      "id": 10,
+      "label": "Active dimer",
+      "tokens": 0,
+      "x": 620,
+      "y": 380
+    },
+    {
+      "id": 11,
+      "label": "Mitogenic signal",
+      "tokens": 0,
+      "x": 780,
+      "y": 380
+    }
+  ],
+  "transitions": [
+    {
+      "id": 1,
+      "label": "phosphorylate",
+      "x": 380,
+      "y": 660
+    },
+    {
+      "id": 2,
+      "label": "dephosphorylate",
+      "x": 540,
+      "y": 540
+    },
+    {
+      "id": 3,
+      "label": "ligand binding",
+      "x": 380,
+      "y": 380
+    },
+    {
+      "id": 4,
+      "label": "dimerization",
+      "x": 540,
+      "y": 380
+    },
+    {
+      "id": 5,
+      "label": "downstream signal",
+      "x": 700,
+      "y": 380
+    },
+    {
+      "id": 6,
+      "label": "growth factors \u2192 G1/S",
+      "x": 940,
+      "y": 660
+    },
+    {
+      "id": 7,
+      "label": "DNA replicated",
+      "x": 940,
+      "y": 540
+    },
+    {
+      "id": 8,
+      "label": "G2/M checkpoint",
+      "x": 880,
+      "y": 420
+    },
+    {
+      "id": 9,
+      "label": "anaphase trigger",
+      "x": 820,
+      "y": 220
+    },
+    {
+      "id": 10,
+      "label": "quiescence",
+      "x": 700,
+      "y": 100
+    },
+    {
+      "id": 11,
+      "label": "re-entry",
+      "x": 940,
+      "y": 100
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "label": "G1 phase",
+      "active": true,
+      "x": 940,
+      "y": 600
+    },
+    {
+      "id": 2,
+      "label": "S phase",
+      "active": false,
+      "x": 940,
+      "y": 480
+    },
+    {
+      "id": 3,
+      "label": "G2 phase",
+      "active": false,
+      "x": 940,
+      "y": 360
+    },
+    {
+      "id": 4,
+      "label": "M phase",
+      "active": false,
+      "x": 940,
+      "y": 240
+    },
+    {
+      "id": 5,
+      "label": "G0 (quiescent)",
+      "active": false,
+      "x": 820,
+      "y": 100
+    }
+  ],
+  "arcs": [
+    {
+      "src": {
+        "kind": "place",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 6
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "place",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 7
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 8
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 9
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 9
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 4
+      },
+      "weight": 2
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 10
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 11
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 11
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "state",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 7
+      },
+      "dst": {
+        "kind": "state",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "state",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 9
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 9
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 10
+      },
+      "dst": {
+        "kind": "state",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 11
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 11
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    }
+  ]
+}

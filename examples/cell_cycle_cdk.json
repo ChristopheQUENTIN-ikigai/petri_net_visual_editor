@@ -1,0 +1,467 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [
+    {
+      "id": 1,
+      "label": "Growth factors",
+      "tokens": 4,
+      "x": 560,
+      "y": 620
+    },
+    {
+      "id": 2,
+      "label": "Cyclin D-CDK4/6",
+      "tokens": 0,
+      "x": 710,
+      "y": 560
+    },
+    {
+      "id": 3,
+      "label": "Cyclin E-CDK2",
+      "tokens": 0,
+      "x": 710,
+      "y": 440
+    },
+    {
+      "id": 4,
+      "label": "Cyclin B-CDK1 (MPF)",
+      "tokens": 0,
+      "x": 710,
+      "y": 240
+    },
+    {
+      "id": 5,
+      "label": "APC/C",
+      "tokens": 1,
+      "x": 770,
+      "y": 110
+    },
+    {
+      "id": 6,
+      "label": "DNA replicated",
+      "tokens": 0,
+      "x": 710,
+      "y": 330
+    }
+  ],
+  "transitions": [
+    {
+      "id": 1,
+      "label": "synthesize Cyclin D",
+      "x": 620,
+      "y": 560
+    },
+    {
+      "id": 2,
+      "label": "Restriction point",
+      "x": 900,
+      "y": 500
+    },
+    {
+      "id": 3,
+      "label": "DNA replication",
+      "x": 900,
+      "y": 380
+    },
+    {
+      "id": 4,
+      "label": "synthesize Cyclin B",
+      "x": 620,
+      "y": 300
+    },
+    {
+      "id": 5,
+      "label": "G2/M checkpoint",
+      "x": 900,
+      "y": 260
+    },
+    {
+      "id": 6,
+      "label": "anaphase (APC/C)",
+      "x": 1040,
+      "y": 380
+    },
+    {
+      "id": 7,
+      "label": "exit to G0",
+      "x": 995,
+      "y": 560
+    },
+    {
+      "id": 8,
+      "label": "re-enter (mitogens)",
+      "x": 1090,
+      "y": 470
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "label": "G1 phase",
+      "active": true,
+      "x": 900,
+      "y": 560
+    },
+    {
+      "id": 2,
+      "label": "S phase",
+      "active": false,
+      "x": 900,
+      "y": 440
+    },
+    {
+      "id": 3,
+      "label": "G2 phase",
+      "active": false,
+      "x": 900,
+      "y": 320
+    },
+    {
+      "id": 4,
+      "label": "M phase",
+      "active": false,
+      "x": 900,
+      "y": 200
+    },
+    {
+      "id": 5,
+      "label": "G0 quiescent",
+      "active": false,
+      "x": 1090,
+      "y": 560
+    }
+  ],
+  "arcs": [
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "state",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "state",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "state",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 6
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "state",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "place",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 7
+      },
+      "dst": {
+        "kind": "state",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    }
+  ]
+}

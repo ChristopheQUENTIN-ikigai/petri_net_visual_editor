@@ -1,0 +1,23 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [],
+  "transitions": [
+    {"id": 1, "label": "tick", "x": 320, "y": 240},
+    {"id": 2, "label": "tick", "x": 460, "y": 360},
+    {"id": 3, "label": "tick", "x": 200, "y": 360}
+  ],
+  "states": [
+    {"id": 1, "label": "Green",  "active": true,  "x": 200, "y": 240},
+    {"id": 2, "label": "Yellow", "active": false, "x": 460, "y": 240},
+    {"id": 3, "label": "Red",    "active": false, "x": 320, "y": 420}
+  ],
+  "arcs": [
+    {"src": {"kind": "state", "id": 1}, "dst": {"kind": "transition", "id": 1}, "weight": 1},
+    {"src": {"kind": "transition", "id": 1}, "dst": {"kind": "state", "id": 2}, "weight": 1},
+    {"src": {"kind": "state", "id": 2}, "dst": {"kind": "transition", "id": 2}, "weight": 1},
+    {"src": {"kind": "transition", "id": 2}, "dst": {"kind": "state", "id": 3}, "weight": 1},
+    {"src": {"kind": "state", "id": 3}, "dst": {"kind": "transition", "id": 3}, "weight": 1},
+    {"src": {"kind": "transition", "id": 3}, "dst": {"kind": "state", "id": 1}, "weight": 1}
+  ]
+}

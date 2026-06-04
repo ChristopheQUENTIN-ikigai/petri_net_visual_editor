@@ -1,0 +1,30 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [
+    {"id": 1, "label": "Producer ready", "tokens": 1, "x": 200, "y": 500},
+    {"id": 2, "label": "Buffer", "tokens": 0, "x": 400, "y": 400},
+    {"id": 3, "label": "Consumer ready", "tokens": 1, "x": 600, "y": 500},
+    {"id": 4, "label": "Producer busy", "tokens": 0, "x": 200, "y": 300},
+    {"id": 5, "label": "Consumer busy", "tokens": 0, "x": 600, "y": 300}
+  ],
+  "transitions": [
+    {"id": 1, "label": "produce", "x": 300, "y": 400},
+    {"id": 2, "label": "deposit", "x": 300, "y": 250},
+    {"id": 3, "label": "withdraw", "x": 500, "y": 400},
+    {"id": 4, "label": "consume", "x": 500, "y": 250}
+  ],
+  "states": [],
+  "arcs": [
+    {"src": {"kind": "place", "id": 1},      "dst": {"kind": "transition", "id": 1}, "weight": 1},
+    {"src": {"kind": "transition", "id": 1}, "dst": {"kind": "place", "id": 4},      "weight": 1},
+    {"src": {"kind": "place", "id": 4},      "dst": {"kind": "transition", "id": 2}, "weight": 1},
+    {"src": {"kind": "transition", "id": 2}, "dst": {"kind": "place", "id": 1},      "weight": 1},
+    {"src": {"kind": "transition", "id": 2}, "dst": {"kind": "place", "id": 2},      "weight": 1},
+    {"src": {"kind": "place", "id": 2},      "dst": {"kind": "transition", "id": 3}, "weight": 1},
+    {"src": {"kind": "place", "id": 3},      "dst": {"kind": "transition", "id": 3}, "weight": 1},
+    {"src": {"kind": "transition", "id": 3}, "dst": {"kind": "place", "id": 5},      "weight": 1},
+    {"src": {"kind": "place", "id": 5},      "dst": {"kind": "transition", "id": 4}, "weight": 1},
+    {"src": {"kind": "transition", "id": 4}, "dst": {"kind": "place", "id": 3},      "weight": 1}
+  ]
+}

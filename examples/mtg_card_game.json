@@ -1,0 +1,524 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [
+    {
+      "id": 1,
+      "label": "Library",
+      "tokens": 7,
+      "x": 140,
+      "y": 600
+    },
+    {
+      "id": 2,
+      "label": "Hand",
+      "tokens": 0,
+      "x": 320,
+      "y": 600
+    },
+    {
+      "id": 3,
+      "label": "Battlefield",
+      "tokens": 0,
+      "x": 540,
+      "y": 600
+    },
+    {
+      "id": 4,
+      "label": "Graveyard",
+      "tokens": 0,
+      "x": 760,
+      "y": 600
+    },
+    {
+      "id": 5,
+      "label": "Mana pool",
+      "tokens": 0,
+      "x": 540,
+      "y": 460
+    },
+    {
+      "id": 6,
+      "label": "Stack",
+      "tokens": 0,
+      "x": 320,
+      "y": 460
+    }
+  ],
+  "transitions": [
+    {
+      "id": 1,
+      "label": "draw card",
+      "x": 230,
+      "y": 600
+    },
+    {
+      "id": 2,
+      "label": "play land",
+      "x": 430,
+      "y": 600
+    },
+    {
+      "id": 3,
+      "label": "tap for mana",
+      "x": 540,
+      "y": 530
+    },
+    {
+      "id": 4,
+      "label": "cast spell",
+      "x": 320,
+      "y": 530
+    },
+    {
+      "id": 5,
+      "label": "resolve",
+      "x": 430,
+      "y": 460
+    },
+    {
+      "id": 6,
+      "label": "creature dies",
+      "x": 650,
+      "y": 600
+    },
+    {
+      "id": 7,
+      "label": "advance",
+      "x": 210,
+      "y": 280
+    },
+    {
+      "id": 8,
+      "label": "advance",
+      "x": 350,
+      "y": 280
+    },
+    {
+      "id": 9,
+      "label": "advance",
+      "x": 490,
+      "y": 280
+    },
+    {
+      "id": 10,
+      "label": "advance",
+      "x": 630,
+      "y": 280
+    },
+    {
+      "id": 11,
+      "label": "advance",
+      "x": 700,
+      "y": 210
+    },
+    {
+      "id": 12,
+      "label": "advance",
+      "x": 490,
+      "y": 160
+    },
+    {
+      "id": 13,
+      "label": "advance",
+      "x": 350,
+      "y": 160
+    },
+    {
+      "id": 14,
+      "label": "advance",
+      "x": 140,
+      "y": 210
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "label": "Untap step",
+      "active": true,
+      "x": 140,
+      "y": 280
+    },
+    {
+      "id": 2,
+      "label": "Upkeep",
+      "active": false,
+      "x": 280,
+      "y": 280
+    },
+    {
+      "id": 3,
+      "label": "Draw step",
+      "active": false,
+      "x": 420,
+      "y": 280
+    },
+    {
+      "id": 4,
+      "label": "Main phase 1",
+      "active": false,
+      "x": 560,
+      "y": 280
+    },
+    {
+      "id": 5,
+      "label": "Combat",
+      "active": false,
+      "x": 700,
+      "y": 280
+    },
+    {
+      "id": 6,
+      "label": "Main phase 2",
+      "active": false,
+      "x": 560,
+      "y": 160
+    },
+    {
+      "id": 7,
+      "label": "End step",
+      "active": false,
+      "x": 420,
+      "y": 160
+    },
+    {
+      "id": 8,
+      "label": "Cleanup",
+      "active": false,
+      "x": 280,
+      "y": 160
+    }
+  ],
+  "arcs": [
+    {
+      "src": {
+        "kind": "place",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 6
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 7
+      },
+      "dst": {
+        "kind": "state",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "state",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 9
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 9
+      },
+      "dst": {
+        "kind": "state",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 10
+      },
+      "dst": {
+        "kind": "state",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 11
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 11
+      },
+      "dst": {
+        "kind": "state",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 6
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 12
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 12
+      },
+      "dst": {
+        "kind": "state",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 7
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 13
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 13
+      },
+      "dst": {
+        "kind": "state",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "state",
+        "id": 8
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 14
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 14
+      },
+      "dst": {
+        "kind": "state",
+        "id": 1
+      },
+      "weight": 1
+    }
+  ]
+}

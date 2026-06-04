@@ -1,0 +1,414 @@
+{
+  "format": "petri-editor",
+  "version": 2,
+  "places": [
+    {
+      "id": 1,
+      "label": "Oxaloacetate",
+      "tokens": 1,
+      "x": 560.0,
+      "y": 690.0
+    },
+    {
+      "id": 2,
+      "label": "Citrate",
+      "tokens": 0,
+      "x": 736.776695296637,
+      "y": 616.7766952966368
+    },
+    {
+      "id": 3,
+      "label": "Isocitrate",
+      "tokens": 0,
+      "x": 810.0,
+      "y": 440.0
+    },
+    {
+      "id": 4,
+      "label": "a-Ketoglutarate",
+      "tokens": 0,
+      "x": 736.776695296637,
+      "y": 263.22330470336317
+    },
+    {
+      "id": 5,
+      "label": "Succinyl-CoA",
+      "tokens": 0,
+      "x": 560.0,
+      "y": 190.0
+    },
+    {
+      "id": 6,
+      "label": "Succinate",
+      "tokens": 0,
+      "x": 383.22330470336317,
+      "y": 263.2233047033631
+    },
+    {
+      "id": 7,
+      "label": "Fumarate",
+      "tokens": 0,
+      "x": 310.0,
+      "y": 440.00000000000006
+    },
+    {
+      "id": 8,
+      "label": "Malate",
+      "tokens": 0,
+      "x": 383.22330470336317,
+      "y": 616.776695296637
+    },
+    {
+      "id": 9,
+      "label": "Acetyl-CoA",
+      "tokens": 3,
+      "x": 880,
+      "y": 700
+    },
+    {
+      "id": 10,
+      "label": "NADH",
+      "tokens": 0,
+      "x": 1040,
+      "y": 540
+    },
+    {
+      "id": 11,
+      "label": "CO2",
+      "tokens": 0,
+      "x": 1040,
+      "y": 440
+    },
+    {
+      "id": 12,
+      "label": "FADH2",
+      "tokens": 0,
+      "x": 1040,
+      "y": 340
+    },
+    {
+      "id": 13,
+      "label": "GTP",
+      "tokens": 0,
+      "x": 1040,
+      "y": 240
+    }
+  ],
+  "transitions": [
+    {
+      "id": 1,
+      "label": "citrate synthase",
+      "x": 655.6708580912725,
+      "y": 670.9698831278217
+    },
+    {
+      "id": 2,
+      "label": "aconitase",
+      "x": 790.9698831278217,
+      "y": 535.6708580912724
+    },
+    {
+      "id": 3,
+      "label": "isocitrate DH",
+      "x": 790.9698831278217,
+      "y": 344.32914190872754
+    },
+    {
+      "id": 4,
+      "label": "a-KG DH",
+      "x": 655.6708580912725,
+      "y": 209.03011687217833
+    },
+    {
+      "id": 5,
+      "label": "succinyl-CoA synthetase",
+      "x": 464.3291419087276,
+      "y": 209.03011687217833
+    },
+    {
+      "id": 6,
+      "label": "succinate DH",
+      "x": 329.0301168721783,
+      "y": 344.32914190872754
+    },
+    {
+      "id": 7,
+      "label": "fumarase",
+      "x": 329.0301168721783,
+      "y": 535.6708580912725
+    },
+    {
+      "id": 8,
+      "label": "malate DH",
+      "x": 464.3291419087276,
+      "y": 670.9698831278217
+    }
+  ],
+  "states": [],
+  "arcs": [
+    {
+      "src": {
+        "kind": "place",
+        "id": 1
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 9
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 1
+      },
+      "dst": {
+        "kind": "place",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 2
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 2
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 2
+      },
+      "dst": {
+        "kind": "place",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 3
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 3
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 3
+      },
+      "dst": {
+        "kind": "place",
+        "id": 11
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 4
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 4
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 10
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 4
+      },
+      "dst": {
+        "kind": "place",
+        "id": 11
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 5
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 5
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 5
+      },
+      "dst": {
+        "kind": "place",
+        "id": 13
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 6
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 6
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "place",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 6
+      },
+      "dst": {
+        "kind": "place",
+        "id": 12
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 7
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 7
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 7
+      },
+      "dst": {
+        "kind": "place",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "place",
+        "id": 8
+      },
+      "dst": {
+        "kind": "transition",
+        "id": 8
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "place",
+        "id": 1
+      },
+      "weight": 1
+    },
+    {
+      "src": {
+        "kind": "transition",
+        "id": 8
+      },
+      "dst": {
+        "kind": "place",
+        "id": 10
+      },
+      "weight": 1
+    }
+  ]
+}
